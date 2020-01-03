@@ -5,6 +5,7 @@ WORKDIR /opt
 COPY . /opt
 RUN apk add --no-cache gcc \
     libc-dev \
+    libffi-dev \
     make \
     && pip install --user poetry && \
     poetry install && \
