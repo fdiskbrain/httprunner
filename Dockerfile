@@ -6,6 +6,7 @@ COPY . /opt
 RUN apk add --no-cache gcc \
     libc-dev \
     libffi-dev \
+    openssl-dev \
     make \
     && pip install --user poetry && \
     poetry install && \
