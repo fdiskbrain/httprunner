@@ -4,7 +4,7 @@ LABEL maintainer="httprunner Maintainers <zhurong@qq.com>"
 WORKDIR /opt
 COPY . /opt
 RUN apk add --no-cache gcc \
-    lib-dev \
+    libc-dev \
     make \
     && pip install --user poetry && \
     poetry install && \
