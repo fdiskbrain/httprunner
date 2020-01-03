@@ -1,6 +1,6 @@
 FROM python:3.7-alpine
 
-LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com>"
+LABEL maintainer="httprunner Maintainers <zhurong@qq.com>"
 WORKDIR /opt
 COPY . /opt
 RUN pip install --user poetry && \
