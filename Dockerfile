@@ -8,7 +8,8 @@ RUN apk add --no-cache gcc \
     libffi-dev \
     openssl-dev \
     make \
-    && pip install --user poetry && \
+    #&& pip install --user poetry && \
+    && pip install poetry && \
     poetry install && \
     poetry run python -m unittest discover
 #CMD ["nginx", "-g", "daemon off;"]
