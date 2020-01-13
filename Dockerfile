@@ -4,12 +4,12 @@ LABEL maintainer="httprunner Maintainers <zhurong@qq.com>"
 WORKDIR /opt
 COPY . /opt
 RUN apk add --no-cache --virtual .build \
-     gcc \
-     libc-dev \
-     libffi-dev \
-     openssl-dev \
-     make \
-    && pip install poetry  \
+    gcc \
+    libc-dev \
+    libffi-dev \
+    openssl-dev \
+    make \
+    && pip install poetry \
     && poetry install \
     && poetry run python -m unittest discover \
     && apk del .build
